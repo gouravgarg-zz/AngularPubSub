@@ -8,4 +8,22 @@ If we want to use data binding between multiple controller we need to use  publi
 pattern, for the same we on $broadcaster and $on methods for the same 
 
 
+use ng-change to change value in local storage
+$$hashkey is numberic : from angular it self, it's  object value to check values has been changed or not
+
+
+ng click vs ng changed
+click will update (angular model and database / custom logic  ) or (database / custom logic and angular model and   ),
+so there can be a race conditions so always use change event it always use angular and cusome logic. 
+
+multiple ref 
+
+hash key value 
+
+
+
+
+
+
+
 

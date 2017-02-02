@@ -16,7 +16,7 @@
         
           	<div ng-repeat="todo in todoList">
           		<div ng-show="!todo.isEditMode">
-          			<input type="checkbox" ng-model="todo.isCompleted"  >
+          			<input type="checkbox" ng-model="todo.isCompleted"  ng-change="saveEvent(todo)">
           			<label ng-class="{strike : todo.isCompleted}"> {{todo.text}}</label>	
           			<input ng-disabled="todo.isCompleted" type="button" value="Edit" ng-click="editEvent(todo)">
           			<input type="button" value="Delete wiht ref " ng-click="deleteEvent(todo)" >

@@ -37,11 +37,17 @@ angular.module('ToDoApp',[])
 
 	$scope.editEvent = function(todo){
 				todo.isEditMode=true;
-				 originalValue =todo.text;
+				originalValue =todo.text;
 		}
 
 		$scope.saveEvent = function(todo){
 				todo.isEditMode=false;
+				console.log(todo);
+				delete todo.$$hashKey;
+				//delete todo.isEditMode;
+				//delete todo.originalValue;
+				console.log(todo);
+				todoBusinessService.update(todo );
 		}
 		$scope.cancelEvent = function(todo){
 				todo.text=originalValue;
@@ -84,6 +90,11 @@ angular.module('ToDoApp',[])
 			return dbService.set('todo-'+todo.id,todo);
 		},
 
+
+		update : function(todo){
+			return dbService.update('todo-'+todo.id,todo);
+		},
+
 		fetch : function(){
 			var todoList=[];
 			var storageAll  = dbService.getLocalStorage();
@@ -121,7 +132,7 @@ angular.module('ToDoApp',[])
 		localStorage.setItem(key, JSON.stringify(value));
 	}
 
-	this.update=function(key){
+	this.update=function(key,value){
 		localStorage.setItem(key, JSON.stringify(value));
 	}
 
