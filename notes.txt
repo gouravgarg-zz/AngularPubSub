@@ -1,0 +1,11 @@
+In java script object behave like objects / array depend on requirments 
+var a= {"b":20}
+a.b = 20 (with dot notation)
+we can also use string notaion to fetch value
+
+
+If we want to use data binding between multiple controller we need to use  publisher and subscriber 
+pattern, for the same we on $broadcaster and $on methods for the same 
+
+
+
