@@ -21,7 +21,13 @@ multiple ref
 hash key value 
 
 
+www.bootsnip.com
+www.bootwatcher.com
+Baas :  backend as service e.g (Parse,friebase)
 
+JSON-Server https://goo.gl/rCLsXR
+we can use it as RESTSerever which provide data on file systm
+we need to  give data by  any way. just drag drop on command line
 
 
 
